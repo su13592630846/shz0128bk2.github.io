@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=GB2312" />
+<meta name="keywords" />
+<meta name="description"/>
+	
+<title></title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<script>
+function setTab(name,cursel){
+	cursel_0=cursel;
+	for(var i=1; i<=links_len; i++){
+		var menu = document.getElementById(name+i);
+		var menudiv = document.getElementById("con_"+name+"_"+i);
+		if(i==cursel){
+			menu.className="off";
+			menudiv.style.display="block";
+		}
+		else{
+			menu.className="";
+			menudiv.style.display="none";
+		}
+	}
+}
+function Next(){                                                        
+	cursel_0++;
+	if (cursel_0>links_len)cursel_0=1
+	setTab(name_0,cursel_0);
+} 
+var name_0='one';
+var cursel_0=1;
+var ScrollTime=3000;//循环周期，可任意更改（毫秒）
+var links_len,iIntervalId;
+onload=function(){
+	var links = document.getElementById("tab1").getElementsByTagName('li')
+	links_len=links.length;
+	for(var i=0; i<links_len; i++){
+		links[i].onmouseover=function(){
+			clearInterval(iIntervalId);
+			this.onmouseout=function(){
+				iIntervalId = setInterval(Next,ScrollTime);;
+			}
+		}
+	}
+	document.getElementById("con_"+name_0+"_"+links_len).parentNode.onmouseover=function(){
+		clearInterval(iIntervalId);
+		this.onmouseout=function(){
+			iIntervalId = setInterval(Next,ScrollTime);;
+		}
+	}
+	setTab(name_0,cursel_0);
+	iIntervalId = setInterval(Next,ScrollTime);
+}
+</script>
+</head>
+
+<style>
+.tab1{width:780px;border-top:#gray solid 1px;border-bottom:#gray solid 1px;margin:50px auto 0 auto;background:gray;}
+.menu{height:28px;border-right:#ccc solid 1px; font-size:14px;}
+.menu li{float:left;width:99px;text-align:center;line-height:28px;height:28px;cursor:pointer;border-left:#ccc solid 1px;border-bottom:#ccc solid 1px;color:#666;overflow:hidden;background:#E0E2EB;}
+.menu li.off{background:#fff;color:#336699;font-weight:bold; border-bottom:none;}
+.menudiv{height:210px;border-left:#cccccc solid 1px;border-right:#cccccc solid 1px;border-top:0;background:#fefefe}
+.menudiv div{padding:15px;line-height:28px;}
+</style>
+<body>
+
+
+
+<center>
+<table width="1000" border="0"  cellspacing="0" cellpadding="0" border-spacing="0">
+  <tr>
+<td height="1200" >
+ <table width="1000" border="0" align="center" class="nav2"   cellspacing="0" cellpadding="0">
+     
+       <tr> 
+<td width="200" height="200"><img src="images/logo.jpg" width="200" height="200"/></td> 
+<td rowspan="9" width="800">
+<table width="800" border="0" align="center" cellspacing="0">
+     
+      <tr> <td width="800" height="200"> <img src="images/photo.jpg" width="800" height="200"/></td></tr> 
+       <tr>  <td height="1000" >
+<table >
+<tr>
+<td width="800" height="550" style="text-align:left;color:black;" background="images/n1.jpg" >
+<div class="tab1" id="tab1">
+	<div class="menu">
+		<ul>
+			<li id="one1" onclick="setTab('one',1)">NBA联盟</li>
+			<li id="one2" onclick="setTab('one',2)">CBA</li>
+			<li id="one3" onclick="setTab('one',3)">CUBA</li>
+		</ul>
+	</div>
+	<div class="menudiv">
+		<div id="con_one_1"><a href="news1.html">1.网络赌球的“影响”</a><br/>
+<a href="news4.html">2.危险！NBA又迎来停摆危机，546名球员中，48名确定新冠</a></div>
+		<div id="con_one_2" style="display:none;"><a href="news2.html">1.CBA重磅官宣！超级外援正式离开老东家 加盟北控投奔马布里</a></div>
+		<div id="con_one_3" style="display:none;"><a href="news3.html">1.328天的等待，CUBA重逢在武汉</a></div>
+	</div>
+</div>
+<br/><br/>
+<center><img src="images/n3.jpg" width="780" height="250" style="padding:0 10px;"/></center><br/>
+</td>
+</tr>
+<tr>
+<td style="border-top:#FFF 1px dashed" width="800" height="458">
+<center>
+<img src="images/n2.jpg" width="750" height="400" style="padding:0 10px;"/>
+</center>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+       
+    </table>
+</td>
+      </tr>
+       <tr class="nav"  >  <td height="50" ><a href="index.html">网站首页</a></td> </tr>
+       <tr class="nav"  >  <td height="50" ><a   href="about.html">关于我们</a></td> </tr>
+       <tr class="nav"  >  <td height="50" ><a class="active" href="news.html">新闻咨询</a></td> </tr>
+        <tr class="nav"  > <td height="50"><a href="contact.html">联系我们</a></td> </tr>
+       <tr class="nav"  >  <td height="50"><a href="liuyan.html">给我留言</a></td> </tr>
+        <tr> <td  height="766" style="border-right:#FFF 1px dashed;">
+<center style="width:200;padding:20px 10px;color:white;text-align:left;">
+<img src="images/1.gif" width="180" height="200"/>
+<p>篮球运动是以投篮、上篮和扣篮为中心的对抗性体育运动之一，两队参与，每队出场5名队员，目的是将球投入对方球篮框中得分，并阻止对方获得球权和得分。篮球比赛的形式多种多样，其中包括最流行的街头三人篮球赛。当今世界篮球水平最高的联赛是美国篮球职业联盟（NBA）比赛。
+篮球运动，创建时间为1892年1月（另一种说法是1891年12月）。</p><p>创建人为美国马萨诸塞州菲尔德基督教青年会训练学校教师詹姆斯·奈史密斯博士。男子篮球在1904年被列入奥运会的比赛项目，到1936年柏林奥运会成为正式项目。而女子篮球则到1976年蒙特利尔奥运会成为正式比赛项目。篮球队员以位置来划分分为前锋，中锋，后卫。篮球比赛是在长28米，宽15米的场地进行。</p>
+</center>
+
+
+ </td> </tr>
+    </table>
+ 
+</td>
+  </tr>
+ 
+
+  <tr>
+    <td  bgcolor="gray" height="40" >
+   <center><font color="white">篮球之家</font></center>
+</td> 
+  </tr>
+</table>
+</center>
+
+</body>
+</html>

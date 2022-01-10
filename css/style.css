@@ -1,0 +1,35 @@
+body {
+font-family: 'Open Sans', sans-serif;
+font-size: 13px;
+line-height: 20px;
+background: black;
+-webkit-font-smoothing: antialiased;
+margin:0;
+padding:0;
+}
+.nav2 tr{
+background: url(../images/bg.gif) repeat; text-align:center;
+} 
+.nav td a {
+color:white;
+padding-top: 15px;
+padding-bottom: 15px;
+font-weight: bold;
+text-transform: uppercase;
+text-shadow: 1px 1px 1px #222;
+text-decoration: none;
+padding: 10px 40px;
+background: url(../images/menu2.png)  no-repeat;
+}
+.nav td a:hover,.nav td a.active{background: url(../images/menu1.png)  no-repeat;color:#ef7524;}
+table tr td {
+padding: 0;
+margin:0;
+}
+
+.liu tr{
+ text-align:center;
+background: url(../images/0.png) repeat; 
+}
+a{text-decoration: none;}
+ul{list-style-type:none}
